@@ -1,0 +1,973 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    
+}
+
+body{
+    background-color: #ebe7e7;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear ;
+}
+
+body.dark{
+    background: #232c35;
+    color: #fff;
+}
+
+.checkbox{
+    opacity: 0;
+    position: absolute;
+}
+.label{
+    background: #111;
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 50px;
+    transform: scale(1.5);
+}
+.label .ball{
+    background-color: #fff;
+    border-radius: 50px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translate(0px);
+    transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball{
+    transform: translate(24px);
+}
+.fa-moon{   
+    color: #f1c40f;    
+
+}
+.fa-sun{
+    color: #f39c12;
+}
+header{
+    position:relative;
+    top: 0;left: 0; right: 0;    
+    background:linear-gradient(to bottom right, #293b42,#546b75,#d6eef8,#7e7b7b);
+    box-shadow: 0 5px 10px rgb(0,0,0.1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+
+}
+header .ppp img{
+    max-width:200px;
+    max-height:200px;
+    width: auto;
+    height: auto
+}
+header .navbar ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+
+}
+header .navbar ul li{
+    position: relative;
+  
+}
+header .navbar ul li a{
+    font-size: 18px;
+    padding: 20px;
+    color: black;
+    display: inline-flex;
+    align-items: center;
+    
+}
+header .navbar ul li.align-right{
+    margin-left: auto;
+}
+header .navbar ul li a:hover{
+    background: #333;
+    color: #ffffff;
+}
+#menu-bar{
+    display: none;
+}
+header label{
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    display: none;
+}
+button{
+    position:relative;
+    top: 0;left: 0; right: 0;    
+    background:linear-gradient(to bottom right, #293b42,#546b75,#d6eef8,#7e7b7b);
+    box-shadow: 0 5px 10px rgb(0,0,0.1);    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+.sumir{
+    display: none;
+}
+.subir{
+    position: fixed;
+    width: 15px;
+    height: 30px;
+    bottom: 0;
+}
+/*  */
+
+.vantagens{
+    display: flex;
+}
+.vantagens-list{
+    color: #0aa7ce;
+}
+.vantagens-list2{
+    color: #3b3b3b;
+}
+
+.vantagens ul li{
+    font-size: 22px;
+    margin: 10px;
+    list-style: none;
+}
+
+/* Menu 2FA, Máscara, Verified e SMS */
+.figure-list ul{
+    display: block;
+}
+
+.figure-list li{
+    display: inline-block;
+    margin: 20px 20px 10px 20px;
+}
+
+.figure-list a{
+    text-decoration: none;
+    font-size: 22px;
+}
+
+.figure-list figure img{
+    width: 1rem;
+}
+
+figcaption{
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Corpo e Article */
+
+
+.titulo{
+    font-size: 58px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+    text-decoration-color: #0aa7ce;
+}
+.sub-titulo{
+    font-size: 33px;
+    color: #0aa7ce;
+}
+
+.text-titulo{
+    font-size: 25px;
+    margin-bottom: 30px;
+    font-style: oblique;
+    text-shadow: 1px 1px 2px #194853
+}
+
+.texto{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+
+.img-texto{
+    width: 30rem;
+    float: right;
+}
+
+main{
+    margin: 50px;
+}
+h2,h3,h4,h5,p{
+    margin-left: 20px;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+}
+
+img{
+    width: 25rem;
+    max-width: 50rem;
+    min-width: 5rem;
+}
+.img-usos{
+    width: 60%;
+  margin: auto;
+  display: flex;
+            
+}
+.img-usos{
+    width: 1rem;
+}
+.img-usos1{
+    width: 60%;
+  margin: auto;
+  display: none;
+            
+}
+.img-usos1{
+    width: 1rem;
+}
+body.dark .img-usos{
+    width: 60%;
+  margin: auto;
+  display: none;
+            
+}
+body.dark .img-usos{
+    width: 1rem;
+}
+body.dark .img-usos1{
+    width: 60%;
+  margin: auto;
+  display: flex;
+            
+}
+body.dark .img-usos1{
+    width: 1rem;
+}
+
+body.dark .list-CPaaS, body.dark .list-CPaaS1{
+    color: #fff;
+}
+
+.list-CPaaS1{
+    font-size: 28px;
+    color: #3b3b3b;
+}
+
+.list-list{
+ font-size: 14px;
+}
+
+.list-usos  {
+    height: 220px;
+    position: relative;
+    font-size: 20px;
+   
+}
+.menu ul{
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li{
+    margin: 10px;
+}
+
+.menu a{
+    color: black;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.article-cpaas{
+    background-color: #0aa7ce;
+    color: #fff;
+    border-style:solid  ;
+    border-width: 3px;
+    border-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    margin: 20px 0 30px;   
+}
+
+.text-cpaas{
+    margin: 20px 0;
+    font-size: 28px;
+    width: 100%;  
+}
+
+.marcacao{
+    font-size: 28px;
+}
+
+.b-cpaas{
+    color: #000;
+    font-size: 28px;
+}
+
+.usos{
+    display: flex;
+}
+
+.list-usos{
+    list-style: none;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold ;
+    color: #0aa7ce;
+}
+
+.list-usos li{
+    color: #000;
+    font-size: 14px;
+    list-style: none;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* Tabelas Exemplos */
+
+.table{
+    width: 100%;       
+      border-collapse: collapse;
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+      overflow-x: auto;
+}
+
+.table-exemplos{
+    background-color: #79e0fa;
+    padding: 0.5rem;
+    
+    
+}
+.img-email img{
+    margin: 20px 10px 0 10px;
+}
+.table-exemplos1{
+    background-color: #d6eef8;
+    padding: 0.5rem;
+}
+
+.exemplos, .exemplos1{
+    display: inline-flex;
+    padding: 0.5rem;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+.list-exemplos{
+    display: flex;
+    text-align: center;
+    font-size: 14px;
+    color: black;
+    width: 20rem;
+}
+.list-exemplos img{
+    width: 5rem;
+}
+
+/* Como Funciona */
+.img-computer{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+   
+}
+
+.computer, .quem-usa{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.list-computer, .list-quem-usa{
+    display: inline-block;
+}
+
+.list-computer li, .list-quem-usa li{
+    list-style: none;
+}
+.seta-baixo{
+    width: 50%;
+    margin-left: 30px;
+
+}
+
+
+/* Quem Usa 1*/
+
+.img-quem-usa{
+    width: 10rem;
+}
+.img-quem-usa1{
+    width: 10rem;
+    display: none;
+}
+body.dark .img-quem-usa{
+    width: 10rem;
+    display: none;
+}
+body.dark .img-quem-usa1{
+    width: 10rem;
+    display: block;
+}
+
+.quem-usa{
+    text-align: center;
+    width: 100%;
+    
+}
+ul{
+    
+    padding: 20px;
+}
+.list-quem-usa{
+    
+    font-size: 50px;
+    color: #000;
+}
+
+.list-quem-usa li{
+    font-size: 25px;
+    justify-content: space-between;    
+    text-align: left;
+    color: #000;
+}
+
+.p-quem-usa{
+    margin-top: 20px;
+}
+
+/* Quem usa 2 */
+
+
+/* 2FA */
+h5{
+    font-size: 28px;
+    color: #3b3b3b;
+    font-style: oblique;
+    margin: 5px 0 20px 20px;
+}
+body.dark h5, body.dark .h4, body.dark h3{
+    color: #0aa7ce;
+}
+.h4{
+    font-size: 22px;
+    font-weight: bold ;
+    color: #3b3b3b;
+}
+
+.img-2FA{
+    float: right;
+}
+
+.list-2FA{
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #5e5e5e;
+}
+
+.list-b{
+    color: #000000;
+}
+
+.article-text{
+    color: #5e5e5e;
+    font-size: 22px;
+}
+
+.porcentagem{
+    font-size: 58px;
+    color: #0aa7ce;
+}
+
+/* Numero Mascara */
+
+.num-mask{
+    display: flex;
+    text-align: center;
+}
+
+.num-mask-img{
+    float: right;
+    margin: 0 20px 0px 20px;
+    width: 11rem;
+}
+
+.list-num-mask{
+    font-size: 18px;
+    color: #5e5e5e;
+}
+
+.num-mask p{
+    color: #5e5e5e;
+}
+
+.num-mask img{
+    width: 10rem;
+}
+.quem-pode-usar{
+    font-size: 22px;
+    color: #0aa7ce;
+}
+
+.img-quem-pode-usar{
+    float: right;
+    width: 28rem;
+    margin: 10px;
+}
+
+/* Google Verified Calls */
+
+.titulo-Google{
+    font-size: 72px;
+    text-align: center;
+    margin: 40px 0 20px;
+    background-color: #0aa7ce;
+    padding: 10px;
+    color: #fff;
+}
+
+.img-grafico{
+    float: right;
+    width: 35rem;
+}
+
+.text-grafico{
+    float: inline-start;
+    text-align: center;
+}
+
+.list-grafico{
+    font-size: 20px;
+    color: #5e5e5e;
+}
+
+.img-verified{
+    float: right;
+    width: 600px;
+    
+}
+
+.img-playstore{
+    float: right;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 35rem;
+    height: 25rem;
+}
+
+.google-div{
+    display: flex;
+    text-align: center;
+}
+
+.google-div img{
+    width: 10rem;
+}
+
+.img-google{
+    width: 15rem;
+}
+
+.img-usos-google{
+    float: right;
+}
+
+/* SMS Programável */
+
+.img-sms{
+    float: right;
+}
+
+.title-sms{
+    font-size: 32px;
+    color: #3b3b3b;
+    margin: 10px 10%;
+}
+
+.div-porcent{
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    margin: 0;
+}
+
+.text-sms{
+    font-size: 28px;
+    text-align: center;
+    color: #5e5e5e;
+    width: 100%;
+}
+
+.porcentagem-sms{
+    font-size: 8rem;
+    color: #0aa7ce;
+    width: 100%;
+}
+
+.div-sms{
+    margin: 1rem 3rem;
+    width: 100%;
+}
+
+.img-jornada{
+    width: 70rem;
+}
+
+
+/* Quem Usa CPaaS */
+
+.title-final{
+    font-size: 72px;
+    font-weight: bold;
+    margin: 0;
+    padding: 3rem;
+    border-style: solid;
+    border-color: #000;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    background-color: #0aa7ce;
+}
+
+.img-parceiros{
+    width: 50rem;
+}
+
+.quem-usa-sms{
+    display: inline-flex;
+}
+
+.img-cell{
+    width: 15rem;
+}
+
+.fig-cell{
+    font-size: 22px;
+    text-align:center ;
+}
+
+footer{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    width: 100vw;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 40px;
+    color: #ffff;
+
+}
+.rodape-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+}
+.rodape-content h3{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-transform: capitalize;
+    line-height: 3rem;
+
+}
+.rodape-content p{
+    max-width: 500px;
+    margin: 10px auto;
+    line-height: 28px;
+    font-size: 14px;
+
+}
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0 ;
+}
+.socials li{
+    margin: 0 10px;
+
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+
+}
+.socials a i{
+    font-size: 1.1rem ;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: aqua;
+
+}
+.rodape-butao  {
+     background: #000;
+     width: 100vw;
+     padding: 20px 0 ;
+     text-align: center;
+}
+.rodape-butao p{
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;     
+}
+
+
+
+  @media (max-width:991px){
+    
+    header{
+        padding: 20px;
+    }
+    header label{
+        display: initial;
+
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #fff;
+        border-top: 1px solid rgb(0,0,0.1);
+        display: none;
+    }
+    header .navbar ul li{
+        width: 100%;
+
+    }
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+    .titulo {
+       font-size: 30px; 
+    }
+    #imagem1{
+        width: 90%;
+    }
+    .texto{
+        font-size: 20px;   
+        
+    }
+    .article-cpaas{
+        font-size: 20px;
+        
+    }
+    .text-cpaas{
+        font-size: 20px;
+    }
+    .img-usos{
+        width: 49%;
+       display:table-column;
+       vertical-align:baseline;
+    }
+    
+    .list-usos{
+        display: table;
+        font-size: 20px;
+        padding: 2%;
+      
+       
+       
+    }
+    .table .list-exemplos{ 
+         display:grid;      
+        padding: 0.2rem;
+        
+    }
+    .img-computer{
+        width: 60%;
+        font-size: 20px;
+        display: flex;
+    }
+     
+    .computer,.quem-usa,.list-computer, .list-quem-usa {
+        
+        display: table;
+        padding: 20px;
+        font-size: 20px;
+    }
+    .img-quem-usa{
+        display: table-column;
+        right: 10%;
+        
+    }
+    .img-quem-usa,.list-quem-usa{
+        display: block;
+        width: 50%;
+        padding: 20px;
+        font-size: 20px;
+    }
+    .img-quem-usa{
+        width: 15rem;
+    }
+    .list-num-mask{
+        font-size: 25px;
+        color: #000;
+    }
+    .img-quem-pode-usar{
+        width: 100%;
+        padding: 5%;
+    }
+    .quem-usa{
+        font-size: 50px;        
+        text-align: center;
+        width: 100%;
+        
+    }
+    ul{
+        
+        padding: 20px;
+    }
+    .list-quem-usa{
+        
+        font-size: 40px;
+        color: #000;
+    }
+    
+    .list-quem-usa li{
+        font-size: 25px;
+        justify-content: space-between;    
+        text-align: left;
+        color: #000;
+    }
+    
+    .p-quem-usa{
+        margin-top: 20px;}
+     .num-mask{
+            display: table;
+            text-align:center;
+            width: 60%;
+        }
+    .quem-pode-usar,.article-text{
+        font-size: 20px;
+        padding: 0 0 10px;
+    }
+    .list-num-mask{
+        font-size: 20px;
+        text-align: start;
+        padding: 0 0 10px;
+    }   
+    
+    .article-text{
+        font-size: 20px;
+        color: #000;
+    }
+    .img-grafico{
+        display: flex;        
+        width: 100%;
+    }
+    .text-grafico{
+        width: 100%;
+    }
+    .texto-google-div{
+        font-size: 20px;
+        color: #000;
+        padding: 5%;
+    }
+    .list-grafico{
+        padding: 0 0 10px;
+        font-size: 20px;
+        color: black;
+    }
+    .img-verified{
+        display: flex;        
+        width: 110%;
+        padding: 0 0 10px;
+    }
+    .img-playstore{
+        width: 100%;
+        padding: 0 0 10px;
+    }
+    .google-div{
+        display: grid;     
+        grid-column: auto;
+        padding: 5% 0;
+
+    }
+    .google-div img{
+       
+        padding: 5%;
+    }
+    .img-usos-google{
+        display: flex;
+        width:100%;
+        padding: 5%;
+    }
+    .img-sms{
+        width: 50%;
+        
+        
+    }
+
+    .title-sms{
+        color: #000;
+        font-size: 20px;
+       padding:  0 1em 0; 
+      
+    }
+    .text-sms{
+        font-size: 20px;
+        color: #000;
+    }
+    .porcentagem-sms{
+        display: grid;
+        width: 50%;
+        font-size: 40px;
+    }
+    .img-jornada{
+        display: flex;
+       width: 70vh;
+    }
+    .quem-usa-sms,.img-cell,.fig-cell{
+        display: table;
+        width: 60%;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 5% 0;
+        justify-content:space-between;        
+        
+    }
+    .title-final,.titulo-Google{
+        font-size: 30px;
+        border: none;
+    } 
+    .img-parceiros{
+        width: 100%;
+    }  
+       
+    
+  
+}
+
